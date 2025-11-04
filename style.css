@@ -1,1 +1,282 @@
+/* Reset & Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #1e90ff;
+}
+
+/* Buttons */
+.cta-btn, .signup-btn {
+  background-color: #ff3cac; /* Pink */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+.cta-btn:hover, .signup-btn:hover,
+.cta-btn:active, .signup-btn:active { /* Hover/active for mobile */
+  background-color: #e02ea0; 
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.feature-card {
+  background: #ffffff; /* White cards */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 250px;
+  max-width: 350px;
+  border: 2px solid #e0e0e0;
+}
+
+.feature-card:hover,
+.feature-card:active { /* Hover/active for mobile */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Feature Icons */
+.feature-card .icon img {
+  width: 60px;  
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Signup Section */
+.signup-section {
+  text-align: center;
+  margin: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.signup-section input {
+  padding: 10px 15px;
+  width: 250px;
+  border-radius: 5px;
+  border: 2px solid #e0e0e0;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.signup-section input:focus {
+  border-color: #ff3cac;
+}
+
+.signup-section button.signup-btn {
+  border: 2px solid #ff3cac;
+}
+
+/* Footer */
+footer {
+  background-color: #87CEFA; 
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Contact row stacked and left-aligned on larger screens */
+.footer-info .contact-row {
+  display: flex;
+  flex-direction: column; /* Stack the heading and the contact items so they align vertically */
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-info,
+.footer-links {
+  flex: 1 1 200px; /* ensure both columns take the same base width */
+  padding: 0; /* remove any inner padding so left edges line up */
+}
+
+.footer-info {
+  text-align: left; /* Heading & text aligned together on desktop */
+}
+
+/* make both columns behave as columns so their children align at the same left edge */
+.footer-info,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-info .contact-items {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* reset heading and item margins so left edges align exactly */
+.footer-info h4,
+.footer-links h4 {
+  margin: 0 0 10px 0;
+}
+
+.footer-info .contact-item {
+  margin: 0;
+}
+
+.footer-info h4, .footer-links h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s, padding-left 0.2s;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+  color: #ff3cac;
+  padding-left: 5px;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+  }
+
+  .feature-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .feature-card .icon img {
+    width: 50px;  
+    height: 50px;
+  }
+
+  .signup-section input {
+    width: 80%;
+  }
+
+  .cta-btn {
+    margin-bottom: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* On small screens keep contact heading centered and items stacked/centered */
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer-info .contact-row {
+    align-items: center;
+  }
+
+  .footer-info .contact-items {
+    justify-content: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* also center the column children on mobile */
+  .footer-info,
+  .footer-links {
+    align-items: center;
+  }
+}
+
+
 

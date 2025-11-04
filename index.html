@@ -1,3 +1,215 @@
-test....
-<!-- add an image -->
-<img src="images/test.png" alt="image" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrendMiner Landing Page</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #1e90ff;
+    }
+
+    /* Buttons */
+    .cta-btn, .signup-btn {
+      background-color: #ff3cac; /* Same pink for both */
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .cta-btn:hover, .signup-btn:hover {
+      background-color: #e02ea0; /* Slightly darker pink on hover */
+      transform: translateY(-2px);
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: #ffffff; /* White feature cards */
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .signup-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .signup-section input {
+      padding: 10px 15px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #87CEFA; /* Brighter blue */
+      color: #ffffff; /* White text */
+      padding: 40px 20px 20px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-info, .footer-links {
+      margin-bottom: 20px;
+    }
+
+    .footer-info h4, .footer-links h4 {
+      margin-bottom: 10px;
+      color: #ffffff; /* White headings */
+    }
+
+    .footer-links a {
+      color: #ffffff; /* White links */
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+      transition: color 0.3s, padding-left 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ff3cac; /* Hover pink */
+      padding-left: 5px;
+    }
+
+    footer p {
+      text-align: center;
+      margin-top: 20px;
+      color: #ffffff; /* White footer text */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>↗</span> TrendMiner</div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Discover the Latest Trends in Social Media</h1>
+  <p>Unleash the power of data to stay ahead in the digital world with TrendMiner.</p>
+  <img src="images/socialmediapic.jpg" alt="analytics graphic" />
+</section>
+
+<section id="features" class="features">
+  <div class="feature-card">
+    <div class="icon">
+      <img src="images/search-interface-symbol.png" alt="Trend Discovery Icon" />
+    </div>
+    <h3>Real-time Analytics</h3>
+    <p>Access up-to-the-minute data to monitor emerging trends and capitalize on them instantly.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">
+      <img src="images/analysis.png" alt="Analytics Icon" />
+    </div>
+    <h3>Comprehensive Reports</h3>
+    <p>Receive detailed insights with our in-depth reports, tailored to your business.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">
+      <img src="images/rocket.png" alt="Growth Icon" />
+    </div>
+    <h3>User-friendly Interface</h3>
+    <p>Navigate with ease using our intuitive and modern interface designed for all.</p>
+  </div>
+</section>
+
+<div style="text-align:center; margin: 30px 0;">
+  <a href="#signup" class="cta-btn">Get Started Now</a>
+</div>
+
+<section id="signup" class="signup-section">
+  <input type="email" placeholder="Enter your email" />
+  <button class="signup-btn">Sign Up</button>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h4>Contact Us</h4>
+      <p>Email: support@trendminer.com</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Address: 123 Trend St, San Francisco, CA</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#signup">Sign Up</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <p>© 2025 TrendMiner. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
